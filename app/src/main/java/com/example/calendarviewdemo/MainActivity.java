@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 t.setText(new Date(event).toString());
 
                 Intent i = new Intent(getApplicationContext(), Birthday.class);
-                i.putExtra("day", ""+dayOfMonth);
-                i.putExtra("month", ""+month);
+               GlobalData.getInstance().day = ""+dayOfMonth;
+               GlobalData.getInstance().month = ""+month;
                 startActivity(i);
             }
         });

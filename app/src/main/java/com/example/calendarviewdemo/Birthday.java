@@ -19,10 +19,9 @@ public class Birthday extends AppCompatActivity {
 
         t = findViewById(R.id.bday);
 
-        //Get data from Intent
-        Bundle b = getIntent().getExtras();
-        String day = b.getString("day");
-        String month = b.getString("month");
+        //Get data from singleton
+        String day = GlobalData.getInstance().day;
+        String month = GlobalData.getInstance().month;
 
         //todo test if date and month is today
         t.setText(day + " "  + month + " Hooray!");
